@@ -1,0 +1,302 @@
+[2023-01-11T13:40:05.306+0000] {processor.py:153} INFO - Started process (PID=173) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:40:05.307+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:40:05.309+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:40:05.308+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:40:08.785+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:40:08.789+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:40:18.078+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:78 DtypeWarning: Columns (1,3,21) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-11T13:40:27.421+0000] {logging_mixin.py:137} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:40:27.421+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:40:27.421+0000] {dash.py:1968} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:40:27.464+0000] {logging_mixin.py:137} INFO -  * Serving Flask app 'unusual_prefix_9ec0e168250492834ce1cef2e8f4595fed38ca57_flow'
+[2023-01-11T13:40:27.464+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-11T13:40:27.465+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:40:27.465+0000] {_internal.py:224} INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8050
+[2023-01-11T13:40:27.466+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:40:27.465+0000] {_internal.py:224} INFO - Press CTRL+C to quit
+[2023-01-11T13:40:35.341+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:40:35.341+0000] {timeout.py:68} ERROR - Process timed out, PID: 173
+[2023-01-11T13:40:35.350+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:40:35.342+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/flow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/flow.py", line 78, in <module>
+    task2_extract_figures()
+  File "/opt/airflow/dags/flow.py", line 71, in task2_extract_figures
+    app.run_server(debug=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 2133, in run_server
+    self.run(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 1980, in run
+    self.server.run(host=host, port=port, debug=debug, **flask_run_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/flask/app.py", line 1188, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 1098, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 741, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.7/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/flow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#reducing-dag-complexity, PID: 173
+[2023-01-11T13:40:35.375+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:40:35.425+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 30.136 seconds
+[2023-01-11T13:41:05.551+0000] {processor.py:153} INFO - Started process (PID=603) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:41:05.565+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:41:05.566+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:41:05.566+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:41:06.305+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:41:06.308+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:42:29.092+0000] {processor.py:153} INFO - Started process (PID=174) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:42:29.110+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:42:29.119+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:42:29.119+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:42:31.571+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:42:31.605+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:42:59.185+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:42:59.161+0000] {timeout.py:68} ERROR - Process timed out, PID: 174
+[2023-01-11T13:42:59.402+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:42:59.338+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/flow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/flow.py", line 78, in <module>
+    task2_extract_figures()
+  File "/opt/airflow/dags/flow.py", line 33, in task2_extract_figures
+    df = pd.read_csv(path_to_new_csv)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 488, in _read
+    return parser.read(nrows)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1047, in read
+    index, columns, col_dict = self._engine.read(nrows)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 224, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 801, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 880, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 1026, in pandas._libs.parsers.TextReader._convert_column_data
+  File "pandas/_libs/parsers.pyx", line 1073, in pandas._libs.parsers.TextReader._convert_tokens
+  File "pandas/_libs/parsers.pyx", line 1129, in pandas._libs.parsers.TextReader._convert_with_dtype
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/dtypes/common.py", line 1420, in is_extension_array_dtype
+    def is_extension_array_dtype(arr_or_dtype) -> bool:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/flow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#reducing-dag-complexity, PID: 174
+[2023-01-11T13:42:59.422+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:42:59.541+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 30.455 seconds
+[2023-01-11T13:44:33.437+0000] {processor.py:153} INFO - Started process (PID=172) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:44:33.443+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:44:33.444+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:44:33.444+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:44:36.126+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:44:36.141+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:44:46.141+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:78 DtypeWarning: Columns (1,3,21) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-11T13:44:51.710+0000] {logging_mixin.py:137} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:44:51.711+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:44:51.710+0000] {dash.py:1968} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:44:51.720+0000] {logging_mixin.py:137} INFO -  * Serving Flask app 'unusual_prefix_9ec0e168250492834ce1cef2e8f4595fed38ca57_flow'
+[2023-01-11T13:44:51.721+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-11T13:44:51.723+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:44:51.722+0000] {_internal.py:224} INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8050
+[2023-01-11T13:44:51.723+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:44:51.723+0000] {_internal.py:224} INFO - Press CTRL+C to quit
+[2023-01-11T13:45:03.451+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:45:03.450+0000] {timeout.py:68} ERROR - Process timed out, PID: 172
+[2023-01-11T13:45:03.463+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:45:03.452+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/flow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/flow.py", line 78, in <module>
+    task2_extract_figures()
+  File "/opt/airflow/dags/flow.py", line 71, in task2_extract_figures
+    app.run_server(debug=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 2133, in run_server
+    self.run(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 1980, in run
+    self.server.run(host=host, port=port, debug=debug, **flask_run_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/flask/app.py", line 1188, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 1098, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 741, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.7/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/flow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#reducing-dag-complexity, PID: 172
+[2023-01-11T13:45:03.484+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:45:03.513+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 30.094 seconds
+[2023-01-11T13:45:20.443+0000] {processor.py:153} INFO - Started process (PID=483) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:45:20.449+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:45:20.450+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:45:20.450+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:45:21.922+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:45:21.924+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:45:24.528+0000] {processor.py:753} INFO - DAG(s) dict_keys(['UK_Accidents_2020-DAG']) retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:45:24.792+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:45:24.791+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-11T13:45:24.907+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:45:24.903+0000] {dag.py:3427} INFO - Setting next_dagrun for UK_Accidents_2020-DAG to None, run_after=None
+[2023-01-11T13:45:25.019+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 4.583 seconds
+[2023-01-11T13:46:22.750+0000] {processor.py:153} INFO - Started process (PID=173) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:46:22.756+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:46:22.759+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:46:22.759+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:46:24.850+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:46:24.854+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:46:31.339+0000] {processor.py:753} INFO - DAG(s) dict_keys(['UK_Accidents_2020-DAG']) retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:46:31.794+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:46:31.793+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-11T13:46:32.084+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:46:32.084+0000] {dag.py:3427} INFO - Setting next_dagrun for UK_Accidents_2020-DAG to None, run_after=None
+[2023-01-11T13:46:32.236+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 9.491 seconds
+[2023-01-11T13:47:02.458+0000] {processor.py:153} INFO - Started process (PID=441) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:47:02.473+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:47:02.483+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:47:02.483+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:47:03.336+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:47:03.338+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:47:05.449+0000] {processor.py:753} INFO - DAG(s) dict_keys(['UK_Accidents_2020-DAG']) retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:47:05.522+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:47:05.521+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-11T13:47:05.577+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:47:05.577+0000] {dag.py:3427} INFO - Setting next_dagrun for UK_Accidents_2020-DAG to None, run_after=None
+[2023-01-11T13:47:05.618+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 3.166 seconds
+[2023-01-11T13:47:36.047+0000] {processor.py:153} INFO - Started process (PID=701) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:47:36.050+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:47:36.051+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:47:36.051+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:47:37.164+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:47:37.167+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:47:40.564+0000] {processor.py:753} INFO - DAG(s) dict_keys(['UK_Accidents_2020-DAG']) retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:47:40.837+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:47:40.836+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-11T13:47:40.987+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:47:40.987+0000] {dag.py:3427} INFO - Setting next_dagrun for UK_Accidents_2020-DAG to None, run_after=None
+[2023-01-11T13:47:41.047+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 5.007 seconds
+[2023-01-11T13:48:11.496+0000] {processor.py:153} INFO - Started process (PID=953) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:48:11.506+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:48:11.508+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:48:11.508+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:48:12.926+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:48:12.928+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:48:17.141+0000] {processor.py:753} INFO - DAG(s) dict_keys(['UK_Accidents_2020-DAG']) retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:48:17.646+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:48:17.645+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-11T13:48:17.829+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:48:17.829+0000] {dag.py:3427} INFO - Setting next_dagrun for UK_Accidents_2020-DAG to None, run_after=None
+[2023-01-11T13:48:18.023+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 6.556 seconds
+[2023-01-11T13:48:48.757+0000] {processor.py:153} INFO - Started process (PID=1211) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:48:48.762+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:48:48.765+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:48:48.764+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:48:49.496+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:48:49.498+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:48:52.889+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:78 DtypeWarning: Columns (1,3,21) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-11T13:48:55.097+0000] {logging_mixin.py:137} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:48:55.097+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:48:55.097+0000] {dash.py:1968} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:48:55.109+0000] {logging_mixin.py:137} INFO -  * Serving Flask app 'unusual_prefix_9ec0e168250492834ce1cef2e8f4595fed38ca57_flow'
+[2023-01-11T13:48:55.109+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-11T13:48:55.110+0000] {logging_mixin.py:137} WARNING - Address already in use
+[2023-01-11T13:48:55.110+0000] {logging_mixin.py:137} WARNING - Port 8050 is in use by another program. Either identify and stop that program, or start the server with a different port.
+[2023-01-11T13:49:25.797+0000] {processor.py:153} INFO - Started process (PID=1452) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:49:25.804+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:49:25.805+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:49:25.805+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:49:26.154+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:49:26.156+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:49:29.660+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:78 DtypeWarning: Columns (1,3,21) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-11T13:49:33.113+0000] {logging_mixin.py:137} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:49:33.114+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:49:33.113+0000] {dash.py:1968} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:49:33.125+0000] {logging_mixin.py:137} INFO -  * Serving Flask app 'unusual_prefix_9ec0e168250492834ce1cef2e8f4595fed38ca57_flow'
+[2023-01-11T13:49:33.125+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-11T13:49:33.127+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:49:33.126+0000] {_internal.py:224} INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8050
+[2023-01-11T13:49:33.136+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:49:33.136+0000] {_internal.py:224} INFO - Press CTRL+C to quit
+[2023-01-11T13:49:55.808+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:49:55.808+0000] {timeout.py:68} ERROR - Process timed out, PID: 1452
+[2023-01-11T13:49:55.813+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:49:55.809+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/flow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/flow.py", line 78, in <module>
+    task2_extract_figures()
+  File "/opt/airflow/dags/flow.py", line 71, in task2_extract_figures
+    app.run_server(debug=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 2133, in run_server
+    self.run(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 1980, in run
+    self.server.run(host=host, port=port, debug=debug, **flask_run_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/flask/app.py", line 1188, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 1098, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 741, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.7/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/flow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.0/best-practices.html#reducing-dag-complexity, PID: 1452
+[2023-01-11T13:49:55.832+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/flow.py
+[2023-01-11T13:49:55.864+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/flow.py took 30.068 seconds
+[2023-01-11T13:50:26.208+0000] {processor.py:153} INFO - Started process (PID=1878) to work on /opt/airflow/dags/flow.py
+[2023-01-11T13:50:26.210+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/flow.py for tasks to queue
+[2023-01-11T13:50:26.211+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:50:26.211+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/flow.py
+[2023-01-11T13:50:26.964+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:7 UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+[2023-01-11T13:50:26.967+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:8 UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+[2023-01-11T13:50:31.105+0000] {logging_mixin.py:137} WARNING - /opt/airflow/dags/flow.py:78 DtypeWarning: Columns (1,3,21) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-11T13:50:34.774+0000] {logging_mixin.py:137} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:50:34.775+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:50:34.774+0000] {dash.py:1968} INFO - Dash is running on http://127.0.0.1:8050/
+[2023-01-11T13:50:34.795+0000] {logging_mixin.py:137} INFO -  * Serving Flask app 'unusual_prefix_9ec0e168250492834ce1cef2e8f4595fed38ca57_flow'
+[2023-01-11T13:50:34.799+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-11T13:50:34.803+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:50:34.803+0000] {_internal.py:224} INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8050
+[2023-01-11T13:50:34.803+0000] {logging_mixin.py:137} INFO - [2023-01-11T13:50:34.803+0000] {_internal.py:224} INFO - Press CTRL+C to quit

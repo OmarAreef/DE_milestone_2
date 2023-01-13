@@ -1,0 +1,25 @@
+[2023-01-08T16:49:02.434+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: UK_Accidents_2020-DAG.extract_clean_data manual__2023-01-08T16:48:58.714507+00:00 [queued]>
+[2023-01-08T16:49:02.465+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: UK_Accidents_2020-DAG.extract_clean_data manual__2023-01-08T16:48:58.714507+00:00 [queued]>
+[2023-01-08T16:49:02.465+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T16:49:02.465+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-08T16:49:02.466+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T16:49:02.505+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_clean_data> on 2023-01-08 16:48:58.714507+00:00
+[2023-01-08T16:49:02.521+0000] {standard_task_runner.py:55} INFO - Started process 1849 to run task
+[2023-01-08T16:49:02.557+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'UK_Accidents_2020-DAG', 'extract_clean_data', 'manual__2023-01-08T16:48:58.714507+00:00', '--job-id', '279', '--raw', '--subdir', 'DAGS_FOLDER/flow.py', '--cfg-path', '/tmp/tmpegecftve']
+[2023-01-08T16:49:02.612+0000] {standard_task_runner.py:83} INFO - Job 279: Subtask extract_clean_data
+[2023-01-08T16:49:02.864+0000] {task_command.py:389} INFO - Running <TaskInstance: UK_Accidents_2020-DAG.extract_clean_data manual__2023-01-08T16:48:58.714507+00:00 [running]> on host 9f0205691dbf
+[2023-01-08T16:49:03.251+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=UK_Accidents_2020-DAG
+AIRFLOW_CTX_TASK_ID=extract_clean_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-08T16:48:58.714507+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-08T16:48:58.714507+00:00
+[2023-01-08T16:49:04.652+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/operators/python.py:192 DtypeWarning: Columns (0,2,20) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-08T16:49:46.222+0000] {logging_mixin.py:137} WARNING - /opt/***/dags/ETLscripts/transformation.py:30 FutureWarning: Series.dt.weekofyear and Series.dt.week have been deprecated.  Please use Series.dt.isocalendar().week instead.
+[2023-01-08T16:49:51.560+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-08T16:49:51.589+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=UK_Accidents_2020-DAG, task_id=extract_clean_data, execution_date=20230108T164858, start_date=20230108T164902, end_date=20230108T164951
+[2023-01-08T16:49:51.851+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-08T16:49:51.957+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

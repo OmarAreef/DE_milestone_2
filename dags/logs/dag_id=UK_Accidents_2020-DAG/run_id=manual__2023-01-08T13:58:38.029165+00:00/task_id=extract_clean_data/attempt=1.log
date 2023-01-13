@@ -1,0 +1,42 @@
+[2023-01-08T13:58:39.829+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: UK_Accidents_2020-DAG.extract_clean_data manual__2023-01-08T13:58:38.029165+00:00 [queued]>
+[2023-01-08T13:58:39.847+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: UK_Accidents_2020-DAG.extract_clean_data manual__2023-01-08T13:58:38.029165+00:00 [queued]>
+[2023-01-08T13:58:39.847+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T13:58:39.848+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-08T13:58:39.848+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T13:58:39.882+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_clean_data> on 2023-01-08 13:58:38.029165+00:00
+[2023-01-08T13:58:39.893+0000] {standard_task_runner.py:55} INFO - Started process 1905 to run task
+[2023-01-08T13:58:39.906+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'UK_Accidents_2020-DAG', 'extract_clean_data', 'manual__2023-01-08T13:58:38.029165+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/flow.py', '--cfg-path', '/tmp/tmpzc6fqedh']
+[2023-01-08T13:58:39.909+0000] {standard_task_runner.py:83} INFO - Job 109: Subtask extract_clean_data
+[2023-01-08T13:58:40.031+0000] {task_command.py:389} INFO - Running <TaskInstance: UK_Accidents_2020-DAG.extract_clean_data manual__2023-01-08T13:58:38.029165+00:00 [running]> on host 07df51a91e47
+[2023-01-08T13:58:40.178+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=UK_Accidents_2020-DAG
+AIRFLOW_CTX_TASK_ID=extract_clean_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-08T13:58:38.029165+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-08T13:58:38.029165+00:00
+[2023-01-08T13:58:41.546+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/operators/python.py:192 DtypeWarning: Columns (0,2,20) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-08T13:59:30.696+0000] {logging_mixin.py:137} WARNING - /opt/***/dags/ETLscripts/transformation.py:30 FutureWarning: Series.dt.weekofyear and Series.dt.week have been deprecated.  Please use Series.dt.isocalendar().week instead.
+[2023-01-08T13:59:30.800+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/flow.py", line 26, in task1_ETL
+    df.to_csv(path_to_new_csv)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 3482, in to_csv
+    storage_options=storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/formats/format.py", line 1105, in to_csv
+    csv_formatter.save()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/formats/csvs.py", line 243, in save
+    storage_options=self.storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dags/2020_Accidents_UK_transformed.csv'
+[2023-01-08T13:59:30.814+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=UK_Accidents_2020-DAG, task_id=extract_clean_data, execution_date=20230108T135838, start_date=20230108T135839, end_date=20230108T135930
+[2023-01-08T13:59:30.828+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 109 for task extract_clean_data ([Errno 2] No such file or directory: '/usr/local/airflow/dags/2020_Accidents_UK_transformed.csv'; 1905)
+[2023-01-08T13:59:30.849+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-08T13:59:30.872+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
